@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial Firebase</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<main>
+    <img class="wave" src="img/wave.png" alt="wave">
+    <div class="container">
+        <div class="image">
+            <img src="img/bg.svg">
+        </div>
+        <div class="login">
+            <form action="index.html" id="signup-form">
+                <img src="img/avatar.svg">
+                <h2 class="title">Cadastrar Usuário</h2>
+                    <div class="form-field one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div-login">
+                            <h5>E-mail</h5>
+                            <input type="email" class="input">
+                        </div>
+                    </div>
+                    <div class="form-field two">
+                        <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Senha</h5>
+                            <input type="password" class="input">
+                        </div>
+                    </div>
+                    <input type="submit" class="button" value="Salvar usuário e logar">
+                    <div class="form-field three">
+                        <div class="i">
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                        <div class="div-login">
+                            <h5>Salvar no Realtime Database</h5>
+                            <input type="text" class="input" id="texto">                            
+                        </div>                        
+                    </div>
+                    <input type="submit" class="button" value="Salvar no banco" id="salvar">
+                    <ul id="list"></ul>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBJ0dhaWIo_aoQWCPNqCnpU-xDgypODBm0",
+        authDomain: "tutorial-firebase-a717b.firebaseapp.com",
+        databaseURL: "https://tutorial-firebase-a717b.firebaseio.com",
+        projectId: "tutorial-firebase-a717b",
+        storageBucket: "tutorial-firebase-a717b.appspot.com",
+        messagingSenderId: "462994626340",
+        appId: "1:462994626340:web:6386f7cc5f7b34d4f005b1",
+        measurementId: "G-SR6LMR61LQ"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+
+<script src="js/auth.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
